@@ -1,0 +1,63 @@
+$orange: #fe8057;
+$blue: #4e93e1;
+$sky-blue: #66d0fa;
+$grey: #696969;
+
+$mobile: 'min-width: 320px';
+$tablet: 'min-width: 1024px';
+$desktop: 'min-width: 1440px';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  font-size: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media ($tablet) {
+  .container {
+    padding: 0 0;
+  }
+}
+
+@media ($desktop) {
+  .container {
+    max-width: 1440px;
+    padding: 0 80px;
+  }
+}

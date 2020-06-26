@@ -1,0 +1,413 @@
+.header {
+  & * {
+    color: white;
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.header__wrapper {
+  position: absolute;
+
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 9.2%;
+  padding-right: 12%;
+}
+
+.header__logo-wrapper {
+  margin-right: auto;
+}
+
+.header__logo {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+.header__text-wrapper {
+  padding-top: 34px;
+}
+
+.header__tel {
+  display: none;
+}
+
+.header__nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: none;
+  padding-top: 132px;
+  padding-bottom: 32px;
+  padding-right: 12px;
+  padding-left: 8px;
+  width: 100%;
+  min-height: 480px;
+
+  background-color: #25262a;
+
+  a {
+    position: relative;
+
+    &:hover {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 20px;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: $orange;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .header__teacher {
+    &:hover {
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.header__links,
+.header__registration {
+  display: flex;
+  flex-direction: column;
+
+  & * {
+    margin-right: 0;
+    
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.header__links-item {
+  margin-bottom: 31px;
+}
+
+.header__links {
+  padding-top: 8px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid $grey;
+}
+
+.header__registration-item {
+  padding-top: 7px;
+}
+
+.header__registration-item--teacher {
+  order: 2;
+}
+
+.header__registration {
+  padding-top: 20px;
+  padding-left: 4px;
+}
+
+.header__teacher {
+  padding: 10px 34px;
+
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  border: solid 2px $orange;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+.header__registration-item--reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 23px;
+
+  a {
+    margin-bottom: 26px;
+    width: min-content;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header__burger {
+  z-index: 2;
+  width: 39px;
+  height: 26px;
+  margin-top: 31px;
+
+  background-color: transparent;
+  border: 0;
+  background-image: url('../img/burger-menu.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.open-popup {
+  display: block;
+
+  & + .header__burger {
+    background-image: url('../img/close-mobile.png');
+    width: 31px;
+    height: 32px;
+  }
+}
+
+.header__links-item--active {
+  a {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20px;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $orange;
+    }
+  }
+}
+
+@media ($tablet) {
+  .header__wrapper {
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+  }
+
+  .header__nav {
+    position: static;
+
+    width: auto;
+    padding: 0;
+    min-height: auto;
+    display: flex;
+    background-color: transparent;
+    margin-right: auto;
+  }
+
+  .header__logo-wrapper {
+    display: flex;
+    margin-right: 33px;
+  }
+
+  .header__logo {
+    position: static;
+    transform: none;
+
+    margin-right: 33px;
+
+    img {
+      width: 108px;
+      height: 108px;
+    }
+  }
+
+  .header__links,
+  .header__registration {
+    flex-direction: row;
+  }
+
+  .header__links {
+    padding-top: 45px;
+    margin-right: 34px;
+
+    border-bottom: 0;
+
+    & * {
+      font-size: 14px;
+    }
+  }
+
+  .header__links-item--about {
+    margin-right: 34px;
+  }
+
+  .header__registration-item--reg {
+    display: none;
+    width: min-content;
+  }
+
+  .header__links-item--articles {
+    margin-right: 32px;
+  }
+
+  .header__text-wrapper {
+    padding-top: 46px;
+    display: flex;
+  }
+
+  .header__tel {
+    display: block;
+  }
+
+  .header__city {
+    margin-right: 46px;
+  }
+
+  .header__registration-item--teacher {
+    margin-right: 0;
+    padding-top: 13px;
+  }
+
+  .header__teacher {
+    padding: 11px 22px 12px 18px;
+
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .header__burger {
+    display: block;
+    margin-top: 42px;
+  }
+
+  .header__registration {
+    margin-right: auto;
+    padding-top: 30px;
+  }
+
+  .open-popup {
+    .header__registration-item--reg {
+      position: absolute;
+      right: 3.5%;
+      top: 113px;
+      align-items: start;
+
+      display: flex;
+      width: 164px;
+      min-height: 110px;
+      padding: 31px 17px 19px 28px;
+
+      background-color: white;
+      border-radius: 9px 0 9px 9px;
+
+      a {
+        width: min-content;
+        font-weight: 500;
+        margin-bottom: 17px;
+
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.2;
+        color: black;
+      }
+    }
+
+    & + .header__burger {
+      background-image: url('../img/close-tablet.png');
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media ($desktop) {
+  .header {
+    & * {
+      font-size: 16px;
+      letter-spacing: 0.32px;
+    }
+  }
+
+  .header__wrapper {
+    width: auto;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .header__logo-wrapper {
+    margin-right: 30px;
+  }
+
+  .header__logo {
+    margin-right: 40px;
+
+    img {
+      width: 111px;
+      height: 111px;
+    }
+  }
+
+  .header__text-wrapper {
+    padding-top: 45px;
+  }
+
+  .header__links {
+    margin-right: 85px;
+  }
+
+  .header__city {
+    margin-right: 35px;
+  }
+
+  .header__tel {
+    padding-left: 20px;
+  }
+
+  .header__links-item--articles {
+    margin-right: 30px;
+  }
+
+  .header__teacher {
+    padding: 10px 32px 11px 33px;
+    margin-right: 38px;
+
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.24px;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__registration-item--teacher {
+    order: 0;
+  }
+
+  .header__registration-item--reg {
+    display: block;
+    width: auto;
+    padding-top: 14px;
+  }
+
+  .header__registration-button {
+    margin-right: 27px;
+  }
+}

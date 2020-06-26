@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    link(rel="stylesheet", href="css/style.min.css")
+    title Преподам
+  body
+    header.header
+      .container
+        .header__wrapper
+          .header__logo-wrapper
+            a.header__logo(href="#")
+              img(src="img/prepodam.png", alt="Логотип" width="88" height="88")
+            .header__text-wrapper
+              span.header__city Москва
+              a.header__tel(href="tel:+78005623452") +7 800-562-3452
+          nav.header__nav
+            ul.header__links
+              li.header__links-item.header__links-item--about.header__links-item--active
+                a(href="#") О проекте
+              li.header__links-item.header__links-item--articles
+                a(href="#") Онлайн-курсы
+              li.header__links-item
+                a(href="#") Статьи
+            ul.header__registration
+              li.header__registration-item.header__registration-item--teacher
+                a.header__teacher(href="#") Преподавателям
+              li.header__registration-item.header__registration-item--reg
+                a.header__registration-button(href="#") Регистрация
+                a(href="#") Вход
+          button.header__burger(type="button")
+    main.main
+      section.desc
+        .container
+          h1.desc__header <span class="desc__first">Первая</span> образовательная онлайн-платформа, созданная преподами!
+          p.desc__text Описание уникального торгового предложения или же описание названия того или иного продукта, который на первом экран
+          a.desc__registration(href="#") Зарегистрироваться
+          a.desc__scroll(href="#program") 
+            span Подробнее ниже
+      section.program
+        .container#program
+          a.program__teachers(href="#") 199 преподавателей уже работает на сайте
+          .program__wrapper
+            h2.program__header Выберите свою программу
+            .program__list
+              .program__item.program__item--kid
+                picture
+                  source(media="(min-width:1440px)" srcset="img/kid.webp" type="image/webp")
+                  source(media="(min-width: 1024px)" srcset="img/kid-tablet.webp" type="image/webp")
+                  source(media="(min-width: 320px)" srcset="img/kid-mobile.webp" type="image/webp")
+                  source(media="(min-width: 1440px)" srcset="img/kid-mobile.png")
+                  source(media="(min-width: 1024px)" srcset="img/kid-tablet.png")
+                  img(src="img/kid-mobile.png", alt="kid")
+                .program__item-wrapper
+                  h3.program__h3 Школьная программа
+                  p.program__h3.program__h3--hover  Подробнее о программе
+              .program__item.program__item--student
+                picture
+                  source(media="(min-width:1440px)" srcset="img/student.webp" type="image/webp")
+                  source(media="(min-width: 320px)" srcset="img/student-mobile.webp" type="image/webp")
+                  source(media="(min-width: 1440px)" srcset="img/student-mobile.png")
+                  img(src="img/student-mobile.png", alt="student")
+                .program__item-wrapper
+                  h3.program__h3 Студенческая программа
+                  p.program__h3.program__h3--hover Подробнее о программе
+              .program__item.program__item--man
+                picture
+                  source(media="(min-width:1440px)" srcset="img/man.webp" type="image/webp")
+                  source(media="(min-width: 320px)" srcset="img/man-mobile.webp" type="image/webp")
+                  source(media="(min-width: 1440px)" srcset="img/man-mobile.png")
+                  img(src="img/man-mobile.png", alt="man")
+                .program__item-wrapper
+                  h3.program__h3 Дополнительное образование
+                  p.program__h3.program__h3--hover Подробнее о программе
+  script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
+  script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+  script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+  script(src="js/slider.js")
+  script(src="js/popups.js")
