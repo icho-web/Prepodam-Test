@@ -15,7 +15,7 @@
     "jquery": "^3.5.1",
     "posthtml-include": "^1.4.0",
     "pug": "^2.0.4",
-    "swiper": "^5.3.8"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "gulp-plumber": "^1.2.1",
